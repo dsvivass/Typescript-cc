@@ -10,3 +10,24 @@ To execute the compiled javascript file, use the command **node << path >>/<< fi
 ```
     node scripts/main.js
 ```
+
+### tsconfig
+To configure the compiler, use the file *tsconfig.json* in the root folder.
+Example: 
+```
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es6",
+        "outDir": "./scripts",
+        "rootDir": "./",
+        "strict": true,
+        "alwaysStrict": true
+    }
+}
+```
+
+Now, we can compile the file *main.ts* to *main.js* in the folder *scripts*.
+```
+    tsc -p tsconfig.json
+```
